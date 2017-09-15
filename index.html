@@ -1,7 +1,7 @@
-"template": "
-<a  class ='gridoptions fa fa-trash-o fa-2' title='Delete' style='font-size:15px;color: black;text-decoration: none;' href='' a ng-click='onClickDelete(dataItem)'>  </a>
-<a class ='gridoptions fa fa-pencil-square-o fa-2' style='font-size:15px;color: black;text-decoration: none;' href=''  title ='Edit' ng-click='onClickEdit(dataItem)'>  </a>
-#if(dataItem.FundFamily =='ACES'){#<a  class ='gridoptions fa fa-files-o fa-2' style='font-size:15px;color: black;text-decoration: none; display:none; ' href='' title= 'Clone' ng-click='onClickClone(dataItem)'> </a>#}
-else{#
-<a  class ='gridoptions fa fa-files-o fa-2' style='font-size:15px;color: black;text-decoration: none; ' href='' title= 'Clone' ng-click='onClickClone(dataItem)'> </a>#
-}#"
+ if(assetClass=='Alts'){
+        	if($scope.container.detailGridModal.dataSource.data().length > 0 && 
+        			$scope.container.detailGridModal.dataSource.data()[0].Metric ==$scope.detailRow.Metric){
+        		alert("Already present");
+        		return
+        	}
+        }
